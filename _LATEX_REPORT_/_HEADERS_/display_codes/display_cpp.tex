@@ -1,0 +1,29 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mise en page des lignes de codes C++ %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstdefinelanguage{myCpp}{
+  language=C++,
+  morekeywords={class, public, private, protected, virtual, const, override, template, typename, constexpr},
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]",
+  keywordstyle=\bf\color{blue!80!white},
+  stringstyle=\it\color{orange!80!red},
+  commentstyle=\color{Green},
+}
+
+\lstdefinestyle{cpp}{
+  language=myCpp
+  basicstyle=\fontsize{10}{11}\ttfamily,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  stepnumber=1,
+  numbersep=5pt,
+  frame=single,
+  showspaces=false,
+  showstringspaces=false,
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4,
+  captionpos=b,
+}

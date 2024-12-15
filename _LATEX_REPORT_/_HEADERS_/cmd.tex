@@ -1,0 +1,24 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                             %
+%                       Custom commands                       %
+%                                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Declare custom commands %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Romannumeral}[1]{\MakeUppercase{\romannumeral #1}} % make uppercased roman style number #1
+\renewcommand{\div}{\operatorname{div}} % alphabetic divergent operator in math mode
+\newcommand{\grad}{\operatorname{grad}} % alphabetic gradient operator in math mode
+\renewcommand{\restriction}[2]{\left.#1\right|_{#2}}  % mathematical function #1 restriction to #2
+\newcommand{\explain}[1]{\textit{-- #1 --}} % Command \explain for explanation, remplacing ()
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SI units customisation %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \sisetup{output-exponent-marker=\ensuremath{\mathrm{e}}}
+
+\DeclareSIUnit{\degc}{\degree C}
+\DeclareSIUnit{\bara}{barA}
+\DeclareSIUnit{\rpm}{rpm}
+\DeclareSIUnit{\Wh}{Wh}
+\DeclareSIUnit{\it}{\textit{it}}

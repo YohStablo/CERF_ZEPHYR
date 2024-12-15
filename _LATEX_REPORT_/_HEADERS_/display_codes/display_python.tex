@@ -1,0 +1,32 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mise en page des lignes de codes Python %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstdefinelanguage{myPython}
+{
+  language=Python,
+  morekeywords={if, else, while, for, def, import, class, and, or, not, True, False},
+  morecomment=[l]{"},
+  morecomment=[l]{\#},
+  morecomment=[s]{'''}{'''},
+  morestring=[b]',
+  morestring=[b]""",
+}
+
+\lstdefinestyle{python}{
+  language=myPython,
+  basicstyle=\fontsize{10}{11}\sffamily,
+  keywordstyle=\bf\color{blue!80!white},
+  stringstyle=\it\color{orange!80!red},
+  commentstyle=\color{Green},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  stepnumber=1,
+  numbersep=5pt,
+  frame=single,
+  showspaces=false,
+  showstringspaces=false,
+  breaklines=true,
+  breakatwhitespace=false,
+  tabsize=4,
+  captionpos=b,
+}

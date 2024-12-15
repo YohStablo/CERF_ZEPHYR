@@ -1,0 +1,29 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mise en page des lignes de codes FreeFEM++ %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstdefinelanguage{myFFpp}{
+  language=C++,
+  morekeywords={mesh, solve, varf, fespace, macro, real, border, int2d, int1d},
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]",
+  keywordstyle=\bf\color{red!70!black},
+  stringstyle=\it\color{purple!80!blue},
+  commentstyle=\color{Green},
+}
+
+\lstdefinestyle{ffpp}{
+  language=myFFpp,
+  basicstyle=\fontsize{10}{11}\ttfamily,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  stepnumber=1,
+  numbersep=5pt,
+  frame=single,
+  showspaces=false,
+  showstringspaces=false,
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4,
+  captionpos=b,
+}

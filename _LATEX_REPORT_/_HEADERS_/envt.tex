@@ -1,0 +1,59 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                             %
+%                      Environments setup                     %
+%                                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mise en page des notes %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{notecounter}
+\newenvironment{note}{%
+  \refstepcounter{notecounter}
+  \par\addvspace{\baselineskip}%
+  \begin{tcolorbox}[
+    colback=green!20,
+    colframe=green!50!black,
+    left=0.5em,
+    right=0.5em,
+    title=NOTE .\thenotecounter,
+    fonttitle=\bfseries,
+  ]%
+    \itshape\fontsize{11pt}{12pt}\selectfont
+}{%
+  \end{tcolorbox}%
+  \par\addvspace{\baselineskip}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mise en page des summary %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{summary}{%
+  \renewcommand{\thesubsection}{~\Roman{section}}
+  \par\addvspace{\baselineskip}%
+  \addcontentsline{toc}{subsection}{\protect\numberline{}SUMMARY}
+  \begin{tcolorbox}[
+    colback=red!20,
+    colframe=red!80!black,
+    left=0.5em,
+    right=0.5em,
+    title=SUMMARY \thesubsection,
+    fonttitle=\bfseries,
+  ]%
+    \itshape\fontsize{11pt}{12pt}\selectfont
+}{%
+  \end{tcolorbox}%
+  \par\addvspace{\baselineskip}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Appendix environment %
+%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{annexecounter}
+\newenvironment{annexe}[1]{
+  \refstepcounter{annexecounter}
+  \noindent \large \bfseries A\theannexecounter~- #1%
+  \addcontentsline{toc}{subsection}{\protect\numberline{}A\theannexecounter~- #1}
+  \vspace{0.3cm}
+}{%
+    \par\addvspace{\baselineskip}%
+}

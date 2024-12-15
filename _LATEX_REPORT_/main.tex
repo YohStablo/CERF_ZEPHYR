@@ -1,0 +1,307 @@
+\LoadClass[a4paper,12pt]{article}
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                        Packages import                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{_HEADERS_/package.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                             %
+%                        Codes display                        %
+%                                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Création des boolean
+\newboolean{annexe}
+\newboolean{biblio}
+\newboolean{abst}
+\newboolean{thx}
+\newboolean{gloss}
+\newboolean{fortran}
+\newboolean{cpp}
+\newboolean{python}
+\newboolean{ffpp}
+
+% Renseigner si le Rapport contient des annexes 
+\setboolean{annexe}{true}
+% Renseigner si le Rapport contient un abstract
+\setboolean{abst}{false}
+% Renseigner si le Rapport contient des remerciements
+\setboolean{thx}{false}
+% Renseigner si le document contient une bibliographie
+\setboolean{biblio}{false} 
+% Renseigner si le document contient un glossaire
+\setboolean{gloss}{false}
+% Renseigner si le Rapport contient des codes fortran
+\setboolean{fortran}{false}
+% Renseigner si le Rapport contient des codes C++
+\setboolean{cpp}{false}
+% Renseigner si le Rapport contient des codes Python
+\setboolean{python}{true}
+% Renseigner si le Rapport contient des codes FreeFEM++
+\setboolean{ffpp}{true}
+
+% =============================================================
+\ifthenelse{\boolean{fortran}}{ % Mise en page des codes F90
+\input{_HEADERS_/display_codes/display_f90.tex}}
+
+
+% =============================================================
+\ifthenelse{\boolean{cpp}}{ % Mise en page des codes C++
+\input{_HEADERS_/display_codes/display_cpp.tex}}
+
+
+% =============================================================
+\ifthenelse{\boolean{python}}{  % Mise en page des codes Python
+\input{_HEADERS_/display_codes/display_python.tex}}
+
+
+% =============================================================
+\ifthenelse{\boolean{ffpp}}{  % Mise en page des codes FreeFEM++
+\input{_HEADERS_/display_codes/display_ffpp.tex}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      Environments setup                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{_HEADERS_/envt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                       Custom commands                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{_HEADERS_/cmd.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                             %
+%                      Document settings                      %
+%                                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+%%%%%%%%%%%%%%%%%%%%%%%
+% Titre, auteurs, ... %
+%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\titre}{TITLE}
+\newcommand{\sujet}{SUBTITLE}
+\newcommand{\sujets}{Seatech 3A - MOCA}
+\newcommand{\auteur}{Yohan STABLO}
+\newcommand{\referent}{M. Mme.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% En-têtes en pieds de pages %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{hmargin=2cm,vmargin=2.3cm}
+\pagestyle{fancy}
+\fancyhfoffset[]{0pt}
+\setlength{\headheight}{30pt}
+\lhead{\includegraphics[height = 0.7cm]{IMAGES/logo/logo_univ_toulon.png}}
+\rhead{\includegraphics[height = 0.9cm]{IMAGES/logo/logo_seatech.png}}
+\lfoot{\auteur\;\&\;\auteurs}
+% \cfoot{\textcolor{Red}{\textbf{CONFIDENTIAL}}}
+\rfoot{Page \thepage \ / \pageref{LastPage}}
+
+\title{\titre}
+\author{\auteur \& \auteurs}
+\date{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Space around pictures %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\customspace}{6pt}
+\setlength{\textfloatsep}{\customspace}
+\setlength{\intextsep}{\customspace}
+\setlength{\floatsep}{\customspace}
+
+%%%%%%%%%%%%%%%%%%
+% Hyperref setup %
+%%%%%%%%%%%%%%%%%%
+\hypersetup{
+  colorlinks=true,
+  linkcolor=darkgray,
+  filecolor=magenta,      
+  urlcolor=cyan,
+  citecolor=purple,
+  pdftitle={mathe_stablo_rapport_ifs},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Excluding (sub)section from ToC %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{tocdepth}{2} % Change to 1 to exclude subsections as well
+\renewcommand{\familydefault}{\sfdefault}
+
+%%%%%%%%%%%%%%%%%%%%
+%     Glossary     %
+%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\boolean{gloss}}{
+  \input{annexes/glossary.tex}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                                                          %
+%                                             Début du document                                            %
+%                                                                                                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Page de garde     %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{IMAGES/page_garde.png}}
+
+    \centering
+    
+    % Espacement vertical
+    \vspace*{4cm}
+    
+    % Barres horizontales
+    \makebox[0.7\linewidth]{\hrulefill}\\[0.2cm]
+    
+    % Titre encadré
+    \vspace{0.5cm}
+    \begin{minipage}{\textwidth}
+        \centering
+        {\fontsize{28}{48}\selectfont \textsc{\titre}}\\[0.2cm]
+        % {\fontsize{18}{48}\selectfont \textsc{\soustitre}}
+    \end{minipage}
+    \vspace{0.3cm}
+    
+    % Barres horizontales
+    \makebox[0.8\linewidth]{\hrulefill}\\[0.2cm]
+    
+    % Espacement vertical
+    \vspace{2cm}
+    
+    % Description
+    \large{\Large \textbf{\sujet}}\\
+    \large{\textbf{\sujets}}\\
+
+    \vspace{0.5cm}
+    \large{\textbf{2024 - 2025}}
+
+    % \begin{mdframed}[backgroundcolor=red!20,linewidth=0pt]
+    %   \vspace{0.5cm}
+    %   \centering{\textcolor{Red}{\textbf{CONFIDENTIAL}}}
+    %   \vspace{0.5cm}
+    % \end{mdframed}
+    
+    \vspace{1cm}
+    
+    % Encadrants et élèves
+    %  \begin{flushright}
+    {
+    \centering
+        Auteur : \\
+        \auteur
+
+        \vspace{0.8 cm}
+
+        Professeur encadrant : \\
+        \referent
+
+    }
+    %  \end{flushright}
+    
+\end{titlepage}
+\ClearShipoutPictureBG
+\newpage
+
+% Sommaire
+\renewcommand{\thepage}{}
+
+\renewcommand{\thepage}{\arabic{page}}
+\renewcommand{\thesection}{\Roman{section}}
+
+% \includepdf{annexes/plagiat.pdf}
+
+%%%%%%%%%%%%%%%%%%
+%     Résumé     %
+%%%%%%%%%%%%%%%%%%
+\ifthenelse{\boolean{abst}}{
+  \input{SECTIONS/abstract.tex}  
+  \newpage
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Remerciements     %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifthenelse{\boolean{thx}}{
+  \input{SECTIONS/acknow.tex}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Plan du document     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vfill
+\tableofcontents
+\vfill
+
+\newpage
+
+%%%%%%%%%%%%%%
+% Glossaries %
+%%%%%%%%%%%%%%
+\ifthenelse{\boolean{gloss}}{
+  \printglossary[type=\acronymtype]
+  \newpage
+  \printglossary
+  \newpage
+}
+
+%%%%%%%%%%%%%%%%
+% Introduction %
+%%%%%%%%%%%%%%%%
+\section*{Introduction}
+\addcontentsline{toc}{section}{\protect\numberline{}Introduction}
+\subfile{SECTIONS/introduction}
+
+\newpage
+
+\section{Part 1}
+\subfile{SECTIONS/part1}
+
+\newpage
+
+\section{Part 2}
+\subfile{SECTIONS/part2}
+
+\newpage
+
+\section{Part 3}
+\subfile{SECTIONS/part3}
+
+\newpage
+
+\section*{Conclusion}
+\addcontentsline{toc}{section}{\protect\numberline{}Conclusion}%
+\subfile{SECTIONS/sumup}
+
+%%%%%%%%%%%%%%%%%%%
+%     Annexes     %
+%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\ifthenelse{\boolean{annexe}}{
+\addcontentsline{toc}{section}{\protect\numberline{}Appendix}%
+\vspace*{\stretch{1}}
+\begin{center}
+  \section*{\LARGE\textsc{Appendix}}
+\end{center}
+\vspace*{\stretch{1}}
+\newpage
+\subfile{SECTIONS/appendix.tex}
+}
+
+\newpage 
+
+\ifthenelse{\boolean{biblio}}{
+\addcontentsline{toc}{section}{\protect\numberline{}References}
+\bibliographystyle{unsrt}
+\footnotesize{\bibliography{SECTIONS/bib.bib}}
+% \nocite{*}
+}
+
+\end{document}

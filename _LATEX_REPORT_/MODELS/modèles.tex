@@ -1,0 +1,75 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Les modèles de Papy Yohan: let me cook! %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Modèle incrustation code %
+\lstinputlisting[language=myLanguage, style=language_style]{CODES/}
+
+% Insérer une image à la taille d'une page
+\newgeometry{margin=0pt, noheadfoot, paperwidth=\textwidth, paperheight=\textheight}
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{IMAGES/nom.png}
+\end{figure}
+\restoregeometry
+
+% Modèle pour inclusion images :
+\begin{figure}[H] 
+    \centering
+    \includegraphics[width=16cm]{nom.png}
+    \caption{Titre du graph.}
+    \label{graph}
+\end{figure}
+
+% Modèle pour un tableau de n colonnes de largeur 16cm:
+\begin{figure}
+    \centering
+    \begin{tabularx}{16cm}{|c|*{n}{c|}}
+        \hline
+         & & \\ \hline
+         & & \\ \hline
+    \end{tabularx}
+    \caption{Titre du tableau}
+    \label{tab}
+\end{figure}
+
+% Deux images sur la même lignes % SUBFIGURE %
+\begin{figure}[h]
+\centering
+\begin{subfigure}[b]{0.49\linewidth}
+  \centering
+  \includegraphics[width=\linewidth]{IMAGES/a.png}
+  \caption{caption a}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.49\linewidth}
+  \centering
+  \includegraphics[width=\linewidth]{IMAGES/b.png}
+  \caption{caption b}
+\end{subfigure}
+\caption{caption a+b}
+\end{figure}
+
+% Deux images sur la même lignes % MINIPAGE %
+\begin{center}
+\begin{minipage}{0.49\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{IMAGES/a.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.49\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{IMAGES/b.png}
+\end{minipage}
+\end{center}
+
+% Image avec du texte autour
+\noindent
+\begin{minipage}{0.5\textwidth}
+    \centering
+    \fbox{\includegraphics[width=\linewidth]{chemin/vers/ton/image.png}}
+    \captionof{figure}{\centering Légende de l'image}
+\end{minipage}\hfill%
+\begin{minipage}{0.45\textwidth}
+    Texte qui entoure l'image et se termine ici. Il peut être aussi long ou court que tu le souhaites.
+\end{minipage}
