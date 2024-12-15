@@ -12,6 +12,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Création des boolean
+\newboolean{intro}
+\newboolean{sumup}
 \newboolean{annexe}
 \newboolean{biblio}
 \newboolean{abst}
@@ -22,8 +24,12 @@
 \newboolean{python}
 \newboolean{ffpp}
 
+% Renseigner si le Rapport contient une introdcution 
+\setboolean{intro}{true}
+% Renseigner si le Rapport contient une conclusion 
+\setboolean{sumup}{true}
 % Renseigner si le Rapport contient des annexes 
-\setboolean{annexe}{true}
+\setboolean{annexe}{false}
 % Renseigner si le Rapport contient un abstract
 \setboolean{abst}{false}
 % Renseigner si le Rapport contient des remerciements
@@ -37,9 +43,9 @@
 % Renseigner si le Rapport contient des codes C++
 \setboolean{cpp}{false}
 % Renseigner si le Rapport contient des codes Python
-\setboolean{python}{true}
+\setboolean{python}{false}
 % Renseigner si le Rapport contient des codes FreeFEM++
-\setboolean{ffpp}{true}
+\setboolean{ffpp}{false}
 
 % =============================================================
 \ifthenelse{\boolean{fortran}}{ % Mise en page des codes F90
@@ -81,11 +87,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 % Titre, auteurs, ... %
 %%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\titre}{TITLE}
-\newcommand{\sujet}{SUBTITLE}
+\newcommand{\titre}{Modélisation du trimaran Zephyr\\-\\\vspace{0.5cm} Code de calcul CERF}
+\newcommand{\sujet}{Interactions Fluide-Structure}
 \newcommand{\sujets}{Seatech 3A - MOCA}
-\newcommand{\auteur}{Yohan STABLO}
-\newcommand{\referent}{M. Mme.}
+\newcommand{\auteur}{Fabien MATHE}
+\newcommand{\auteurs}{Yohan STABLO}
+\newcommand{\referent}{M. Frédéric GOLAY}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % En-têtes en pieds de pages %
@@ -194,8 +201,8 @@
     %  \begin{flushright}
     {
     \centering
-        Auteur : \\
-        \auteur
+        Auteurs : \\
+        \auteur\;\&\;\auteurs
 
         \vspace{0.8 cm}
 
@@ -254,11 +261,12 @@
 %%%%%%%%%%%%%%%%
 % Introduction %
 %%%%%%%%%%%%%%%%
+\ifthenelse{\boolean{intro}}{
 \section*{Introduction}
 \addcontentsline{toc}{section}{\protect\numberline{}Introduction}
 \subfile{SECTIONS/introduction}
-
 \newpage
+}
 
 \section{Part 1}
 \subfile{SECTIONS/part1}
@@ -275,14 +283,16 @@
 
 \newpage
 
+\ifthenelse{\boolean{sumup}}{
 \section*{Conclusion}
 \addcontentsline{toc}{section}{\protect\numberline{}Conclusion}%
 \subfile{SECTIONS/sumup}
+\newpage
+}
 
 %%%%%%%%%%%%%%%%%%%
 %     Annexes     %
 %%%%%%%%%%%%%%%%%%%
-\newpage
 
 \ifthenelse{\boolean{annexe}}{
 \addcontentsline{toc}{section}{\protect\numberline{}Appendix}%
