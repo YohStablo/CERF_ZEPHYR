@@ -7,7 +7,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                             %
-%                        Codes display                        %
+%                       Codes & sections                      %
 %                                                             %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -24,6 +24,7 @@
 \newboolean{python}
 \newboolean{ffpp}
 
+%% Sections %%
 % Renseigner si le Rapport contient une introdcution 
 \setboolean{intro}{true}
 % Renseigner si le Rapport contient une conclusion 
@@ -38,6 +39,8 @@
 \setboolean{biblio}{false} 
 % Renseigner si le document contient un glossaire
 \setboolean{gloss}{false}
+
+%% Codes %%
 % Renseigner si le Rapport contient des codes fortran
 \setboolean{fortran}{false}
 % Renseigner si le Rapport contient des codes C++
@@ -268,12 +271,12 @@
 \newpage
 }
 
-\section{Part 1}
+\section{Initialisation}
 \subfile{SECTIONS/part1}
 
 \newpage
 
-\section{Part 2}
+\section{Résultats et discussions}
 \subfile{SECTIONS/part2}
 
 \newpage

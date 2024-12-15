@@ -1,6 +1,8 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {}Introduction}{2}{section*.2}%
-\contentsline {section}{\numberline {I}Part 1}{3}{section.1}%
-\contentsline {section}{\numberline {II}Part 2}{4}{section.2}%
-\contentsline {section}{\numberline {III}Part 3}{5}{section.3}%
-\contentsline {section}{\numberline {}Conclusion}{6}{section*.3}%
+\contentsline {section}{\numberline {I}Initialisation}{3}{section.1}%
+\contentsline {section}{\numberline {II}Résultats et discussions}{4}{section.2}%
+\contentsline {subsection}{\numberline {II.1}Résultats}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {II.2}Discussions}{5}{subsection.2.2}%
+\contentsline {section}{\numberline {III}Part 3}{6}{section.3}%
+\contentsline {section}{\numberline {}Conclusion}{7}{section*.5}%

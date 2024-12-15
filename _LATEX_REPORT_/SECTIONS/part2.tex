@@ -2,6 +2,36 @@
 \input{main}
 
 \begin{document}
+\subsection{Résultats}
+Après avoir lancé les calculs de nos simulationsm nos résultats sont disponibles dans les vidéos présentent ici : \href{https://github.com/YohStablo/CERF_ZEPHYR/tree/main/VIDEOS}{[videos]}.
 
+\begin{figure}[H]
+\centering
+% \begin{subfigure}[b]{0.49\linewidth}
+%     \centering
+%     \includegraphics[width=\linewidth]{IMAGES/part2/fffffffffffffffffffff.png}
+%     \caption{Mise à l'eau, exemple de résultat}
+% \end{subfigure}
+% \vfill
+\begin{subfigure}[b]{16cm}
+    \centering
+    \includegraphics[width=\linewidth]{IMAGES/part2/surf_mid.png}
+    \caption{Surf d'une vague, exemple de résultat}
+\end{subfigure}
+\vfill
+\begin{subfigure}[b]{16cm}
+    \centering
+    \includegraphics[width=\linewidth]{IMAGES/part2/breakon_mid.png}
+    \caption{Déferlement, exemple de résultat}
+\end{subfigure}
+\caption{Exemple de résultats en cours de calcul pour les différents cas}
+\end{figure}
+
+\subsection{Discussions}
+Plusieurs points peuvent être critiqués sur nos simulations.
+
+\subsubsection*{Problème de maillage}
+La première critique à formuler concerne le maillage. Effectivement, pour capter correctement les différentes interfaces (air-eau et solide-liquides), il faudrait un maillage très fin, avec un niveau de raffinement extrême.\\
+Cependant, si nous avions raffiné plus, le temps de calcul nécessaire à la résolution de nos cas aurait explosé, déjà que pour simuler \qty{8}{\sec} (déferlement) il nous a fallu plus de \qty{1}{\hour}.
 
 \end{document}
