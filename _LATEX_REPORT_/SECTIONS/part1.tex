@@ -154,5 +154,15 @@ Avec la fonction de mailalge utilisateur :
 \subsection{Configuration}
 
 
+La configuration des différents cas s'effectue dans le fichier \textit{*.inp}. Dans nos simulations, la densité du bateau est fixée à \qty{600}{\kilogram\per\cubic\meter}, ce qui correspond à sa densité moyenne.
+
+Nous définissons une \textit{Sharpness} égale à $0.01$. Cette fonction permet d'affiner la zone de transition entre les deux fluides.
+
+Les schémas de discrétisation en espace et en temps sont d'ordre 2. Le code de calcul, résolvant les équations en explicite, impose le respect d'une condition CFL. Nous avons choisi de fixer ce paramètre à $0.9$.
+
+Dans le cas de la mise à l'eau et du déferlement de la vague, le pas de temps avant un raffinement automatique du maillage est de \qty{0.05}{\second}. Pour le dernier cas, ce paramètre est fixé à \qty{0.01}{\second}.
+
+Les paramètres de grossissement et d'amincissement du maillage sont définis différemment selon les cas. Pour les simulations avec vagues, ces paramètres sont respectivement fixés à $0.5$ et $0.6$. Dans le cas de la mise à l'eau, ils sont fixés à $0.8$ et $1.0$.
+
 
 \end{document}
