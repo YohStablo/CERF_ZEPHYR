@@ -6,14 +6,14 @@
 
 \subsection{Modèle physique}
 
-Le code de calcul CERF résout les équations de Navier-Stokes par méthode des volumes finis.
+Le code de calcul CERF résout les équations de Navier-Stokes par méthode des volumes finis, le tout en explicite.
 Nous l'utilisons pour résoudre un problème d'écoulement multiphasique isotherme par méthode VOF (Volume Of Fluid).
 
 
 
 \subsection{Conditions aux limites}
 
-Dans toutes les différentes configuration présentées dans la suite de ce rapport, nous utilisons des conditions de type \textit{miroir}.
+Dans les trois configurations présentées dans la suite de ce rapport, nous utilisons des conditions de type \textit{miroir}.
 Physiquement, cela représente une domaine fermé où les fluides ne peuvent s'échapper.
 
 
@@ -87,7 +87,7 @@ La fonction utilisateur est la même, seul le fichier \textit{.obj} du bateau es
 
 \subsubsection{Cas de la mise à l'eau}
 
-Le cas de la mise à l'eau nécessite un maillage non orthogonal, composé d'éléments héxaédriques. Projetés en 2D, ces éléments prennent la forme de quadrilatères. La figure ci-dessous donne le maillage à l'instant initiale.
+Le cas de la mise à l'eau nécessite un maillage non orthogonal, composé d'éléments héxaédriques. Projetés en 2D, ces éléments prennent la forme de quadrilatères. La figure ci-dessous donne l'état du maillage à l'instant initiale.
 
 \begin{figure}[H]
     \centering
@@ -154,13 +154,13 @@ Avec la fonction de mailalge utilisateur :
 \subsection{Configuration}
 
 
-La configuration des différents cas s'effectue dans le fichier \textit{*.inp}. Dans nos simulations, la densité du bateau est fixée à \qty{600}{\kilogram\per\cubic\meter}, ce qui correspond à sa densité moyenne.
+La configuration des différents cas s'effectue dans le fichier \textit{*.inp}. Dans nos simulations, la densité de l'eau $\rho_{eau} = \qty{1000}{\kilogram\per\cubic\meter}$, celle de l'air $\rho_{air} = \qty{1}{\kilogram\per\cubic\meter}$ et celle du bateau est fixée à \qty{600}{\kilogram\per\cubic\meter}, ce qui correspond à sa densité moyenne.\\
 
-Nous définissons une \textit{Sharpness} égale à $0.01$. Cette fonction permet d'affiner la zone de transition entre les deux fluides.
+Nous définissons une \textit{Sharpness} égale à $0.01$. Cette fonction permet d'affiner la zone de transition entre les deux fluides.\\
 
-Les schémas de discrétisation en espace et en temps sont d'ordre 2. Le code de calcul, résolvant les équations en explicite, impose le respect d'une condition CFL. Nous avons choisi de fixer ce paramètre à $0.9$.
+Les schémas de discrétisation en espace et en temps sont d'ordre 2. Le code de calcul, résolvant les équations en explicite, impose le respect d'une condition CFL. Nous avons choisi de fixer ce paramètre à $0.9$.\\
 
-Dans le cas de la mise à l'eau et du déferlement de la vague, le pas de temps avant un raffinement automatique du maillage est de \qty{0.05}{\second}. Pour le dernier cas, ce paramètre est fixé à \qty{0.01}{\second}.
+Dans le cas de la mise à l'eau et du déferlement de la vague, le pas de temps avant un raffinement automatique du maillage est de \qty{0.05}{\second}. Pour le dernier cas, ce paramètre est fixé à \qty{0.01}{\second}.\\
 
 Les paramètres de grossissement et d'amincissement du maillage sont définis différemment selon les cas. Pour les simulations avec vagues, ces paramètres sont respectivement fixés à $0.5$ et $0.6$. Dans le cas de la mise à l'eau, ils sont fixés à $0.8$ et $1.0$.
 

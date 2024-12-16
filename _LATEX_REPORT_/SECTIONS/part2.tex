@@ -3,7 +3,7 @@
 
 \begin{document}
 \subsection{Résultats}
-Après avoir lancé les calculs de nos simulationsm nos résultats sont disponibles dans les vidéos présentent ici : \href{https://github.com/YohStablo/CERF_ZEPHYR/tree/main/VIDEOS}{[videos]}.
+Après avoir lancé les calculs de nos simulations, les résultats obtenus sont disponibles dans les vidéos accessibles via ce lien : \href{https://github.com/YohStablo/CERF_ZEPHYR/tree/main/VIDEOS}{[Vidéos]}.
 
 \begin{figure}[H]
 \centering
@@ -31,10 +31,11 @@ Après avoir lancé les calculs de nos simulationsm nos résultats sont disponib
 Plusieurs points peuvent être critiqués sur nos simulations.
 
 \subsubsection*{Problème de maillage}
-La première critique à formuler concerne le maillage. Effectivement, pour capter correctement les différentes interfaces (\textit{air-eau} et \textit{solide-liquides}), il faudrait un maillage très fin, avec un niveau de raffinement extrême.\\
-Cependant, si nous avions raffiné plus, le temps de calcul nécessaire à la résolution de nos cas aurait explosé, déjà que pour simuler \qty{8}{\sec} (déferlement) il nous a fallu plus de \qty{1}{\hour}.\\
+La première critique à formuler concerne le maillage. En effet, pour capturer correctement les différentes interfaces (\textit{air-eau} et \textit{solide-liquide}), un maillage très fin, avec un niveau de raffinement extrême, serait nécessaire.\\  
+Cependant, un raffinement supplémentaire aurait considérablement augmenté le temps de calcul requis pour résoudre nos cas. Alors même que, pour simuler \qty{8}{\second} (déferlement), plus de \qty{1}{\hour} a été nécessaire.\\  
 
-Malheureusement, ce manque de finesse dans le maillage introduit un nouveau problème : les objets, qui sont des liquides figés, diffusent, c-à-d que le bateau "fond". En d'autres termes, le mailalge n'est pas assez fin et le temps de remaillage déjà trop long pour capturer l'interface entre solide et liquides et des bouts du bateau sont alors détachés de l'objet solide, donnant cette impression qu'il est en train de fondre :
+Malheureusement, ce manque de finesse dans le maillage introduit un nouveau problème : les obstacles, modélisés par des liquides figés, diffusent, ce qui donne l'impression que le bateau "fond". En d'autres termes, le maillage n'est pas suffisamment fin et le temps de remaillage, déjà trop long, ne permet pas de capturer correctement l'interface entre le solide et les liquides. Par conséquent, certaines parties du bateau se détachent de l'objet solide, créant l'impression qu'il fond.\\  
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=6cm]{IMAGES/part2/zephyr_launching.0008.png}
@@ -90,6 +91,6 @@ Finalement, un problème auquel nous n'avons aucune explication cette fois est l
 \caption{Démonstration du cas d'entré et sortie du bateau dans un mur}
 \end{figure}
 
-Ici, on peut nettement voir que le bateau fusionne avec le mur avant  de ressortir entier derrière. Il ne s'agit cette fois pas de diffusivité car le bateau ne "fond" pas.
+Ici, on peut nettement voir que le bateau fusionne avec le mur avant de ressortir entier par la suite. Il ne s'agit cette fois pas de diffusivité car le bateau ne "fond" pas.
 
 \end{document}
