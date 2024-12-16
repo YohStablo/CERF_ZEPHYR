@@ -13,5 +13,4 @@
 \contentsline {section}{\numberline {II}Résultats et discussions}{6}{section.2}%
 \contentsline {subsection}{\numberline {II.1}Résultats}{6}{subsection.2.1}%
 \contentsline {subsection}{\numberline {II.2}Discussions}{6}{subsection.2.2}%
-\contentsline {section}{\numberline {III}Part 3}{8}{section.3}%
-\contentsline {section}{\numberline {}Conclusion}{9}{section*.10}%
+\contentsline {section}{\numberline {}Conclusion}{8}{section*.10}%
