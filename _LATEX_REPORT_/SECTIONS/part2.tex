@@ -7,19 +7,19 @@ Après avoir lancé les calculs de nos simulationsm nos résultats sont disponib
 
 \begin{figure}[H]
 \centering
-% \begin{subfigure}[b]{0.49\linewidth}
-%     \centering
-%     \includegraphics[width=\linewidth]{IMAGES/part2/fffffffffffffffffffff.png}
-%     \caption{Mise à l'eau, exemple de résultat}
-% \end{subfigure}
-% \vfill
-\begin{subfigure}[b]{16cm}
+\begin{subfigure}[b]{11cm}
+    \centering
+    \includegraphics[width=\linewidth]{IMAGES/part2/zephyr_launching.0072.png}
+    \caption{Mise à l'eau, exemple de résultat}
+\end{subfigure}
+\vfill
+\begin{subfigure}[b]{11cm}
     \centering
     \includegraphics[width=\linewidth]{IMAGES/part2/surf_mid.png}
     \caption{Surf d'une vague, exemple de résultat}
 \end{subfigure}
 \vfill
-\begin{subfigure}[b]{16cm}
+\begin{subfigure}[b]{11cm}
     \centering
     \includegraphics[width=\linewidth]{IMAGES/part2/breakon_mid.png}
     \caption{Déferlement, exemple de résultat}
@@ -31,7 +31,7 @@ Après avoir lancé les calculs de nos simulationsm nos résultats sont disponib
 Plusieurs points peuvent être critiqués sur nos simulations.
 
 \subsubsection*{Problème de maillage}
-La première critique à formuler concerne le maillage. Effectivement, pour capter correctement les différentes interfaces (air-eau et solide-liquides), il faudrait un maillage très fin, avec un niveau de raffinement extrême.\\
+La première critique à formuler concerne le maillage. Effectivement, pour capter correctement les différentes interfaces (\textit{air-eau} et \textit{solide-liquides}), il faudrait un maillage très fin, avec un niveau de raffinement extrême.\\
 Cependant, si nous avions raffiné plus, le temps de calcul nécessaire à la résolution de nos cas aurait explosé, déjà que pour simuler \qty{8}{\sec} (déferlement) il nous a fallu plus de \qty{1}{\hour}.\\
 
 Malheureusement, ce manque de finesse dans le maillage introduit un nouveau problème : les objets, qui sont des liquides figés, diffusent, c-à-d que le bateau "fond". En d'autres termes, le mailalge n'est pas assez fin et le temps de remaillage déjà trop long pour capturer l'interface entre solide et liquides et des bouts du bateau sont alors détachés de l'objet solide, donnant cette impression qu'il est en train de fondre :
