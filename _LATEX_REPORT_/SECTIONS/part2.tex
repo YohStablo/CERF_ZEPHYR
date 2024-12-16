@@ -72,5 +72,24 @@ Ce problème peut être lié à plusieurs facteur.\\
 Premièrement, un maillage trop grossier qui ne permet pas de capturer correctement les interfaces. Cependant, cette situation a déjà été discutée précédement.\\
 Deuxièmement, le problème pourrait être lié au cas d'étude lui-même. Effectivement, le cas entraine des vitesses importantes dans le fluide (\qty{33}{\meter\per\sec}). Le temps de remaillage pourrait alors être trop long (\qty{0.01}{\sec}) face à la vitesse du phénomène. Il faudrait remailler de façon plus fréquente, cependant, encore une fois le temps de calcul en pâtirait grandement.
 
+\subsubsection*{Problème de limites}
+Finalement, un problème auquel nous n'avons aucune explication cette fois est le fait que les objets rentrent les uns dans les autres et à l'intérieur des murs :
+\begin{figure}
+\centering
+\begin{subfigure}[b]{11cm}
+    \centering
+    \includegraphics[width=11cm]{IMAGES/part2/zephyr_launching.0089.png}
+    \caption{Bateau entrant dans le mur}
+\end{subfigure}
+\vfill
+\begin{subfigure}[b]{11cm}
+    \centering
+    \includegraphics[width=11cm]{IMAGES/part2/wall_pb.png}
+    \caption{Bateau sortant du mur}
+\end{subfigure}
+\caption{Démonstration du cas d'entré et sortie du bateau dans un mur}
+\end{figure}
+
+Ici, on peut nettement voir que le bateau fusionne avec le mur avant  de ressortir entier derrière. Il ne s'agit cette fois pas de diffusivité car le bateau ne "fond" pas.
 
 \end{document}
