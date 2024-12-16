@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.10)  16 DEC 2024 15:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.23)  16 DEC 2024 15:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1240,8 +1240,10 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
 (Font)              scaled to size 17.28pt on input line 190.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 191.
-<IMAGES/page_garde.png, id=55, 597.60106pt x 845.26315pt>
+(Font)              scaled to size 14.4pt on input line 190.
+
+
+<IMAGES/page_garde.png, id=51, 597.60106pt x 845.26315pt>
 File: IMAGES/page_garde.png Graphic file (type png)
 <use IMAGES/page_garde.png>
 Package pdftex.def Info: IMAGES/page_garde.png  used on input line 219.
@@ -1255,12 +1257,14 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
-<IMAGES/logo/logo_univ_toulon.png, id=78, 456.7464pt x 133.6995pt>
+
+
+<IMAGES/logo/logo_univ_toulon.png, id=73, 456.7464pt x 133.6995pt>
 File: IMAGES/logo/logo_univ_toulon.png Graphic file (type png)
 <use IMAGES/logo/logo_univ_toulon.png>
 Package pdftex.def Info: IMAGES/logo/logo_univ_toulon.png  used on input line 253.
 (pdftex.def)             Requested size: 68.03508pt x 19.91684pt.
-<IMAGES/logo/logo_seatech.png, id=79, 1204.5pt x 313.17pt>
+<IMAGES/logo/logo_seatech.png, id=74, 1204.5pt x 313.17pt>
 File: IMAGES/logo/logo_seatech.png Graphic file (type png)
 <use IMAGES/logo/logo_seatech.png>
 Package pdftex.def Info: IMAGES/logo/logo_seatech.png  used on input line 253.
@@ -1295,12 +1299,7 @@ Package pdftex.def Info: IMAGES/logo/logo_seatech.png  used on input line 274.
  [2{c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_afusau.enc}] (./SECTIONS/part1.tex
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
 (Font)              scaled to size 12.0pt on input line 16.
-<IMAGES/part1/Init_zephyr_launching.png, id=96, 3236.09pt x 1577.895pt>
-File: IMAGES/part1/Init_zephyr_launching.png Graphic file (type png)
-<use IMAGES/part1/Init_zephyr_launching.png>
-Package pdftex.def Info: IMAGES/part1/Init_zephyr_launching.png  used on input line 32.
-(pdftex.def)             Requested size: 341.43306pt x 166.46635pt.
-<IMAGES/part1/surf_d0.png, id=97, 1927.2pt x 616.3025pt>
+<IMAGES/part1/surf_d0.png, id=91, 1927.2pt x 616.3025pt>
 File: IMAGES/part1/surf_d0.png Graphic file (type png)
 <use IMAGES/part1/surf_d0.png>
 Package pdftex.def Info: IMAGES/part1/surf_d0.png  used on input line 43.
@@ -1352,17 +1351,24 @@ File: IMAGES/logo/logo_seatech.png Graphic file (type png)
 <use IMAGES/logo/logo_seatech.png>
 Package pdftex.def Info: IMAGES/logo/logo_seatech.png  used on input line 81.
 (pdftex.def)             Requested size: 98.47557pt x 25.6073pt.
- [4{c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_dhi6qf.enc} <./IMAGES/part1/surf_d0.png> <./IMAGES/part1/breakon_d0.png>]
-<IMAGES/part1/mesh_zephyr_lanching.png, id=143, 3236.09pt x 1577.895pt>
-File: IMAGES/part1/mesh_zephyr_lanching.png Graphic file (type png)
-<use IMAGES/part1/mesh_zephyr_lanching.png>
-Package pdftex.def Info: IMAGES/part1/mesh_zephyr_lanching.png  used on input line 84.
-(pdftex.def)             Requested size: 341.43306pt x 166.46635pt.
-<IMAGES/part1/surf_mesh.png, id=144, 1927.2pt x 616.3025pt>
+[3{c:/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_dhi6qf.enc} <./IMAGES/part1/surf_d0.png>]
+<IMAGES/part1/breakon_d0.png, id=123, 1927.2pt x 616.3025pt>
+File: IMAGES/part1/breakon_d0.png Graphic file (type png)
+<use IMAGES/part1/breakon_d0.png>
+Package pdftex.def Info: IMAGES/part1/breakon_d0.png  used on input line 56.
+(pdftex.def)             Requested size: 341.43306pt x 109.18051pt.
+<IMAGES/part1/surf_mesh.png, id=124, 1927.2pt x 616.3025pt>
 File: IMAGES/part1/surf_mesh.png Graphic file (type png)
 <use IMAGES/part1/surf_mesh.png>
 Package pdftex.def Info: IMAGES/part1/surf_mesh.png  used on input line 103.
 (pdftex.def)             Requested size: 341.43306pt x 109.18051pt.
+<IMAGES/part1/breakon_mesh.png, id=125, 1927.2pt x 616.3025pt>
+File: IMAGES/part1/breakon_mesh.png Graphic file (type png)
+<use IMAGES/part1/breakon_mesh.png>
+Package pdftex.def Info: IMAGES/part1/breakon_mesh.png  used on input line 89.
+(pdftex.def)             Requested size: 341.43306pt x 109.18051pt.
+
+
 File: IMAGES/logo/logo_univ_toulon.png Graphic file (type png)
 <use IMAGES/logo/logo_univ_toulon.png>
 Package pdftex.def Info: IMAGES/logo/logo_univ_toulon.png  used on input line 110.
@@ -1386,20 +1392,20 @@ File: IMAGES/logo/logo_seatech.png Graphic file (type png)
 <use IMAGES/logo/logo_seatech.png>
 Package pdftex.def Info: IMAGES/logo/logo_seatech.png  used on input line 278.
 (pdftex.def)             Requested size: 98.47557pt x 25.6073pt.
- [6 <./IMAGES/part1/breakon_mesh.png>] (./SECTIONS/part2.tex
-<IMAGES/part2/zephyr_launching.0072.png, id=192, 3236.09pt x 1577.895pt>
+[5 <./IMAGES/part1/breakon_mesh.png>] (./SECTIONS/part2.tex
+<IMAGES/part2/zephyr_launching.0072.png, id=168, 3236.09pt x 1577.895pt>
 File: IMAGES/part2/zephyr_launching.0072.png Graphic file (type png)
 <use IMAGES/part2/zephyr_launching.0072.png>
 Package pdftex.def Info: IMAGES/part2/zephyr_launching.0072.png  used on input line 12.
 (pdftex.def)             Requested size: 312.9803pt x 152.59818pt.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 (Font)              scaled to size 10.95pt on input line 13.
-<IMAGES/part2/surf_mid.png, id=193, 1927.2pt x 616.3025pt>
+<IMAGES/part2/surf_mid.png, id=169, 1927.2pt x 616.3025pt>
 File: IMAGES/part2/surf_mid.png Graphic file (type png)
 <use IMAGES/part2/surf_mid.png>
 Package pdftex.def Info: IMAGES/part2/surf_mid.png  used on input line 18.
 (pdftex.def)             Requested size: 312.9803pt x 100.08684pt.
-<IMAGES/part2/breakon_mid.png, id=194, 1927.2pt x 617.30624pt>
+<IMAGES/part2/breakon_mid.png, id=170, 1927.2pt x 617.30624pt>
 File: IMAGES/part2/breakon_mid.png Graphic file (type png)
 <use IMAGES/part2/breakon_mid.png>
 Package pdftex.def Info: IMAGES/part2/breakon_mid.png  used on input line 24.
@@ -1409,7 +1415,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--36
 
  []
 
-<IMAGES/part2/zephyr_launching.0008.png, id=195, 456.95718pt x 475.7775pt>
+<IMAGES/part2/zephyr_launching.0008.png, id=171, 456.95718pt x 475.7775pt>
 File: IMAGES/part2/zephyr_launching.0008.png Graphic file (type png)
 <use IMAGES/part2/zephyr_launching.0008.png>
 Package pdftex.def Info: IMAGES/part2/zephyr_launching.0008.png  used on input line 40.
@@ -1431,25 +1437,17 @@ File: IMAGES/logo/logo_seatech.png Graphic file (type png)
 <use IMAGES/logo/logo_seatech.png>
 Package pdftex.def Info: IMAGES/logo/logo_seatech.png  used on input line 283.
 (pdftex.def)             Requested size: 98.47557pt x 25.6073pt.
- [8 <./IMAGES/part2/zephyr_launching.0008.png>] (./SECTIONS/part3.tex)
+[7 <./IMAGES/part2/zephyr_launching.0008.png>] (./SECTIONS/sumup.tex)
+
 File: IMAGES/logo/logo_univ_toulon.png Graphic file (type png)
 <use IMAGES/logo/logo_univ_toulon.png>
-Package pdftex.def Info: IMAGES/logo/logo_univ_toulon.png  used on input line 288.
+Package pdftex.def Info: IMAGES/logo/logo_univ_toulon.png  used on input line 295.
 (pdftex.def)             Requested size: 68.03508pt x 19.91684pt.
 File: IMAGES/logo/logo_seatech.png Graphic file (type png)
 <use IMAGES/logo/logo_seatech.png>
-Package pdftex.def Info: IMAGES/logo/logo_seatech.png  used on input line 288.
+Package pdftex.def Info: IMAGES/logo/logo_seatech.png  used on input line 295.
 (pdftex.def)             Requested size: 98.47557pt x 25.6073pt.
- [9] (./SECTIONS/sumup.tex)
-File: IMAGES/logo/logo_univ_toulon.png Graphic file (type png)
-<use IMAGES/logo/logo_univ_toulon.png>
-Package pdftex.def Info: IMAGES/logo/logo_univ_toulon.png  used on input line 296.
-(pdftex.def)             Requested size: 68.03508pt x 19.91684pt.
-File: IMAGES/logo/logo_seatech.png Graphic file (type png)
-<use IMAGES/logo/logo_seatech.png>
-Package pdftex.def Info: IMAGES/logo/logo_seatech.png  used on input line 296.
-(pdftex.def)             Requested size: 98.47557pt x 25.6073pt.
- [10] 
+[8] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -1457,21 +1455,21 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-03>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E3A88195C2E300944557EB4F059AE4BC;1470.
+(rerunfilecheck)             Checksum: 1A03D1EDC60099C029E014D2E7C26C1F;1393.
  ) 
 Here is how much of TeX's memory you used:
- 41228 strings out of 475188
- 809006 string characters out of 5767804
- 2159248 words of memory out of 5000000
- 61655 multiletter control sequences out of 15000+600000
+ 44143 strings out of 473362
+ 879393 string characters out of 5725050
+ 1626309 words of memory out of 5000000
+ 66357 multiletter control sequences out of 15000+600000
  634396 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,16n,165p,2339b,2770s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinBiolinumTI.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineMTB.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineMTO.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (11 pages, 10029096 bytes).
+ 103i,15n,165p,2438b,1740s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinBiolinumTI.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineMTB.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineMTO.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (9 pages, 8501472 bytes).
 PDF statistics:
- 304 PDF objects out of 1000 (max. 8388607)
- 240 compressed objects within 3 object streams
- 80 named destinations out of 1000 (max. 500000)
- 174 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 265 PDF objects out of 1000 (max. 8388607)
+ 209 compressed objects within 3 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 156 words of extra memory for PDF output out of 10000 (max. 10000000)
 
