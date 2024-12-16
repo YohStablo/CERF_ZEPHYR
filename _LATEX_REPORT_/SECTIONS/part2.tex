@@ -41,5 +41,36 @@ Malheureusement, ce manque de finesse dans le maillage introduit un nouveau prob
     \caption{Illustration du problème de diffusivité des objets solides}
 \end{figure}
 
+\subsubsection*{Problème de réduction de la densité}
+Un problème auquel nous avons été confronté durant notre projet est la réduction anormal de la densité lors de déferlement.\\
+Le cas étudié est un cas d'une vague soumise à la seule gravité qui déferle :
+\begin{figure}
+\centering
+\begin{subfigure}[b]{11cm}
+    \centering
+    \includegraphics[width=11cm]{IMAGES/part2/solobreak_init.png}
+    \caption{Instant initial de la simulation}
+\end{subfigure}
+\vfill
+\begin{subfigure}[b]{11cm}
+    \centering
+    \includegraphics[width=11cm]{IMAGES/part2/solobreak.png}
+    \caption{Instant final (\textit{crash}) de la simulation}
+\end{subfigure}
+\caption{Test de simulation d'un déferlement simple}
+\end{figure}
+
+Malheureusement, cette simulation n'aboutie jamais car la densité de l'air à l'intérieure de la vague qui déferle atteint \qty{3.8e-3}{\kilogram\per\cubic\meter}, entrainant au pas de temps suivant une densité quasi-nulle et donc l'arrêt du calcul.\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=16cm]{IMAGES/part2/solobreak_pb_dens.png}
+    \caption{Visualisation du problème de densité dans le déferlement}
+\end{figure}
+
+Ce problème peut être lié à plusieurs facteur.\\
+Premièrement, un maillage trop grossier qui ne permet pas de capturer correctement les interfaces. Cependant, cette situation a déjà été discutée précédement.\\
+Deuxièmement, le problème pourrait être lié au cas d'étude lui-même. Effectivement, le cas entraine des vitesses importantes dans le fluide (\qty{33}{\meter\per\sec}). Le temps de remaillage pourrait alors être trop long (\qty{0.01}{\sec}) face à la vitesse du phénomène. Il faudrait remailler de façon plus fréquente, cependant, encore une fois le temps de calcul en pâtirait grandement.
+
 
 \end{document}

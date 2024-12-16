@@ -25,9 +25,19 @@ Physiquement, cela représente une domaine fermé où les fluides ne peuvent s'�
 \subsubsection{Cas du surf de vague}
 Pour ce qui est du comportment sur une vague, nous avons voulu représenter le bateau "\textit{surfant}" une vague. Pour ce faire, le bateau est initialement dans le creu d'une vague de \qty{4}{\meter} de haut :
 \begin{figure}[H]
+\centering
+\begin{subfigure}[b]{11.7cm}
     \centering
-    \includegraphics[width=12cm]{IMAGES/part1/surf_d0.png}
-    \caption{Initialisation du cas de \textit{surf}}
+    \includegraphics[width=\linewidth]{IMAGES/part1/surf_d0.png}
+    \caption{Problème initial}
+\end{subfigure}
+\vfill
+\begin{subfigure}[b]{11cm}
+    \centering
+    \includegraphics[width=\linewidth]{IMAGES/part1/surf_press.png}
+    \caption{Pression initiale}
+\end{subfigure}
+\caption{Initialisation du cas de \textit{surf}}
 \end{figure}
 
 Pour ce faire, la vague est définie par une fonction utilisateur sous la forme d'une gaussienne. Sous la gaussienne, la densité est définie à \qty{1000}{\kilo\g\per\cubic\meter} et la pression corrélée à la hauteur d'eau :
