@@ -35,7 +35,7 @@ Dans ce cas, le bateau est posé sur une rampe avec une inclinaison d'environ $1
 
 La pression initiale est donnée par la fontion $P(y) = P_0 + \rho_{eau} g (4.0 - y)$ et appliquée dans l'eau.
 
-
+\newpage
 \subsubsection{Cas du surf de vague}
 Pour ce qui est du comportment sur une vague, nous avons voulu représenter le bateau "\textit{surfant}" une vague. Pour ce faire, le bateau est initialement dans le creu d'une vague de \qty{4}{\meter} de haut :
 \begin{figure}[H]
@@ -127,6 +127,7 @@ Tout ceci se fait grâce à la fonction de mailalge utilisateur :
       IF(x.ge.3.d0 .and. x.le.9.d0 .and. y.ge.(3.d0 - x*3.d0/9.d0) .and. y.le.(5.d0 - x*3.d0/9.d0))nrb=4
 \end{lstlisting}
 
+\newpage
 \subsubsection{Cas du déferlement}
 Le maillage maître est le même que le cas précédent, avec le même niveau de rafinement maximal, ce qui donne l'initialisation suivante :
 \begin{figure}[H]
