@@ -22,17 +22,86 @@ Physiquement, cela représente une domaine fermé où les fluides ne peuvent s'�
 
 \subsection{Conditions initiales}
 
+\subsubsection{Cas du surf de vague}
+Pour ce qui est du comportment sur une vague, nous avons voulu représenter le bateau "\textit{surfant}" une vague. Pour ce faire, le bateau est initialement dans le creu d'une vague de \qty{4}{\meter} de haut :
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{IMAGES/part1/surf_d0.png}
+    \caption{Initialisation du cas de \textit{surf}}
+\end{figure}
 
+Pour ce faire, la vague est définie par une fonction utilisateur sous la forme d'une gaussienne. Sous la gaussienne, la densité est définie à \qty{1000}{\kilo\g\per\cubic\meter} et la pression corrélée à la hauteur d'eau :
+\begin{lstlisting}[style=f90, caption={Fonction utilisateur pour le cas de \textit{surf}}, captionpos=b]
+    CASE(2)
+      ! Gaussian wave input
+      h1 = 7.d0
+      hw = 1.d0
+      c0 = 1.d0
+      sigma = 1.5d0
+      vprim%v(1) = 1.0d0
+      vprim%v(5) = 1.0d5
+      IF(x.le.50.d0) THEN
+         zb = hw + (h1 - hw)*exp(-(x - c0)**2.d0/(2.d0*sigma**2.d0))
+         IF(y.le.zb)THEN
+            vprim%v(1) = 1000.d0
+            vprim%v(5) = 1.d5 + 1000.d0*9.81*(zb - y)
+         ENDIF
+      ENDIF
+\end{lstlisting}
 
+\subsubsection{Cas du déferlement}
+Dans le cas du déferlement de la vague sur le bateau, c'est toujours une vague gaussienne de \qty{4}{\meter} haut qui est initialisée, mais cette fois le bateau est placé initialement plus loin, dans la zone de déferlement de la vague : 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{IMAGES/part1/breakon_d0.png}
+    \caption{Initialisation du cas de déferlement}
+\end{figure}
 
-
-
-
-
+La fonction utilisateur est la même, seul le fichier \textit{.obj} du bateau est différent.
 
 \subsection{Maillage}
+\subsubsection{Cas du surf de vague}
+Les élements du maillage maître sont des carrés de taille \qty{50}{\cm} par \qty{50}{\cm}. Cependant, le niveau de rafinement maximal est $4$, ce qui donne des mailles de taille \qty{3.125}{\cm} par \qty{3.125}{\cm}.\\
+Lors de l'initialisation, l'interface \textit{air-eau} est rafinée au niveau $3$ et le bateau au niveau maximal :
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{IMAGES/part1/surf_mesh.png}
+    \caption{Maillage initial du cas de surf}
+\end{figure}
 
+Tout ceci se fait grâce à la fonction de mailalge utilisateur :
+\begin{lstlisting}[style=f90, caption={Maillge utilisateur pour le cas de \textit{surf}}, captionpos=b]
+    CASE(2)
+      ! Gaussian wave meshing
+      h1 = 5.d0
+      hw = 1.d0
+      nrb=0
+      IF(x.le.6.d0 .and. y.ge.hw .and. y.ge.(5.d0 - x) .and. y.le.(7.5 - x) .and. y.le.(h1 + hw))nrb=3
+      IF(x.ge.6.d0 .and. y.ge.(hw - 0.5) .and. y.le.(hw + 0.5))nrb=3
+      ! Boat meshing
+      IF(x.ge.3.d0 .and. x.le.9.d0 .and. y.ge.(3.d0 - x*3.d0/9.d0) .and. y.le.(5.d0 - x*3.d0/9.d0))nrb=4
+\end{lstlisting}
 
+\subsubsection{Cas du déferlement}
+Le maillage maître est le même que le cas précédent, avec le même niveau de rafinement maximal, ce qui donne l'initialisation suivante :
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{IMAGES/part1/breakon_mesh.png}
+    \caption{Maillage initial du cas de déferlement}
+\end{figure}
+
+Avec la fonction de mailalge utilisateur :
+\begin{lstlisting}[style=f90, caption={Maillage utilisateur pour le cas de déferlement}, captionpos=b]
+    CASE(3)
+      ! Gaussian wave meshing
+      h1 = 7.d0
+      hw = 1.d0
+      nrb=0
+      IF(x.le.6.d0 .and. y.ge.hw .and. y.ge.(6.d0 - x*6.d0/4.d0) .and. y.le.(10.d0 - x*10.d0/7) .and. y.le.(h1 + hw))nrb=3
+      IF(x.ge.6.d0 .and. y.ge.(hw - 0.5) .and. y.le.(hw + 0.5))nrb=3
+      ! Boat meshing
+      IF(x.ge.11.d0 .and. x.le.17.d0 .and. y.ge.0.5 .and. y.le.2.d0)nrb=4
+\end{lstlisting}
 
 
 

@@ -35,6 +35,11 @@ La première critique à formuler concerne le maillage. Effectivement, pour capt
 Cependant, si nous avions raffiné plus, le temps de calcul nécessaire à la résolution de nos cas aurait explosé, déjà que pour simuler \qty{8}{\sec} (déferlement) il nous a fallu plus de \qty{1}{\hour}.\\
 
 Malheureusement, ce manque de finesse dans le maillage introduit un nouveau problème : les objets, qui sont des liquides figés, diffusent, c-à-d que le bateau "fond". En d'autres termes, le mailalge n'est pas assez fin et le temps de remaillage déjà trop long pour capturer l'interface entre solide et liquides et des bouts du bateau sont alors détachés de l'objet solide, donnant cette impression qu'il est en train de fondre :
-% image fabien
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=6cm]{IMAGES/part2/zephyr_launching.0008.png}
+    \caption{Illustration du problème de diffusivité des objets solides}
+\end{figure}
+
 
 \end{document}
