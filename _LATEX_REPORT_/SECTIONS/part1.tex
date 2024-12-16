@@ -22,6 +22,20 @@ Physiquement, cela représente une domaine fermé où les fluides ne peuvent s'�
 
 \subsection{Conditions initiales}
 
+
+\subsubsection{Cas de la mise à l'eau}
+
+Dans ce cas, le bateau est posé sur une rampe avec une inclinaison d'environ $107$ \%. La longueur du domaine est de \qty{20}{m} et la profondeur de l'eau est de \qty{4}{m}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{IMAGES/part1/Init_zephyr_launching.png}
+    \caption{Initialisation du cas de mise à l'eau}
+\end{figure}
+
+La pression initiale est donnée par la fontion $P(y) = P_0 + \rho_{eau} g (4.0 - y)$ et appliquée dans l'eau.
+
+
 \subsubsection{Cas du surf de vague}
 Pour ce qui est du comportment sur une vague, nous avons voulu représenter le bateau "\textit{surfant}" une vague. Pour ce faire, le bateau est initialement dans le creu d'une vague de \qty{4}{\meter} de haut :
 \begin{figure}[H]
@@ -60,7 +74,28 @@ Dans le cas du déferlement de la vague sur le bateau, c'est toujours une vague 
 La fonction utilisateur est la même, seul le fichier \textit{.obj} du bateau est différent.
 
 \subsection{Maillage}
+
+\subsubsection{Cas de la mise à l'eau}
+
+Le cas de la mise à l'eau nécessite un maillage non orthogonal, composé d'éléments héxaédriques. Projetés en 2D, ces éléments prennent la forme de quadrilatères. La figure ci-dessous donne le maillage à l'instant initiale.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{IMAGES/part1/mesh_zephyr_lanching.png}
+    \caption{Maillage initial du cas de mise à l'eau}
+\end{figure}
+
+Le maillage est raffiné au niveau 4 autour du bateau et au niveau 3 autour de la rampe et de la surface libre de l'eau, selon une fonction utilisateur donnée ci-dessous.
+\begin{lstlisting}[style=f90, caption={Maillge utilisateur pour le cas de la mise à l'eau}, captionpos=b]
+    CASE(2)
+    IF(y.ge.(-(8.0d0 / 7.5d0) * x + 7.5d0) .and. y.le.(-(8.0d0 / 7.5d0) * x + 8.5d0))nrb=3
+    IF(x.ge.3.D0 .and. x.le.21.d0 .and. y.ge.3.0d0 .and. y.le.4.5d0)nrb=3
+    IF(y.ge.4.0d0 .and. y.ge.(-(8.0d0 / 7.5d0) * x + 7.5d0) .and. y.le.(-(8.0d0 / 7.5d0) * x + 9.5d0))nrb=4
+\end{lstlisting}
+
+
 \subsubsection{Cas du surf de vague}
+
 Les élements du maillage maître sont des carrés de taille \qty{50}{\cm} par \qty{50}{\cm}. Cependant, le niveau de rafinement maximal est $4$, ce qui donne des mailles de taille \qty{3.125}{\cm} par \qty{3.125}{\cm}.\\
 Lors de l'initialisation, l'interface \textit{air-eau} est rafinée au niveau $3$ et le bateau au niveau maximal :
 \begin{figure}[H]
